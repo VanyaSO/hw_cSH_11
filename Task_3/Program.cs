@@ -16,9 +16,15 @@ class Program
     
     static void Main(string[] args)
     {
-        Console.WriteLine(ArithmeticOperations(12, n => Math.IsEven(n)));
-        Console.WriteLine(ArithmeticOperations(12, n => Math.IsOdd(n)));
-        Console.WriteLine(ArithmeticOperations(12, n => Math.IsPrime(n)));
-        Console.WriteLine(ArithmeticOperations(12, n => Math.IsFibonacci(n)));
+
+        Predicate<int> IsEven = Math.IsEven;
+        Predicate<int> IsOdd = Math.IsOdd;
+        Predicate<int> IsPrime = Math.IsPrime;
+        Predicate<int> IsFibonacci = Math.IsFibonacci;
+        
+        Console.WriteLine(ArithmeticOperations(12, IsEven));
+        Console.WriteLine(ArithmeticOperations(12, IsOdd));
+        Console.WriteLine(ArithmeticOperations(12, IsPrime));
+        Console.WriteLine(ArithmeticOperations(12, IsFibonacci));
     }
 }

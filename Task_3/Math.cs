@@ -2,8 +2,14 @@ namespace Task_3;
 
 public static class Math
 {
-    public static bool IsEven(int number) => number % 2 == 0;
-    public static bool IsOdd(int number) => number % 2 != 0;
+    public static bool IsEven(int number)
+    {
+        return number % 2 == 0;
+    }
+    public static bool IsOdd(int number)
+    {
+        return number % 2 != 0;
+    }
     public static bool IsPrime(int number)
     {
         for (int i = 2; i <= System.Math.Sqrt(number); i++) {
